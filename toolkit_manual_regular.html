@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolkit Manual – Regular Users</title>
+  <style>
+    :root {
+      --deep-orange: #AD2507;
+      --warm-orange: #F08900;
+      --soft-white: #FEF9F6;
+      --text-color: #333;
+    }
+    body {
+      background-color: var(--soft-white);
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 1rem;
+    }
+    header {
+      background-color: var(--deep-orange);
+      color: white;
+      padding: 1rem;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+    .lang-switch button {
+      background-color: var(--warm-orange);
+      color: white;
+      border: none;
+      margin-left: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    h1 {
+      color: var(--deep-orange);
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .download {
+      margin-top: 2rem;
+    }
+    .download a {
+      background-color: var(--deep-orange);
+      color: white;
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => switchLang('en');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Offline Toolkit Manual</h1>
+  </header>
+
+  <div class="lang-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('nl')">Nederlands</button>
+  </div>
+
+  <div data-lang="en" class="section">
+    <h2>What is the Offline Toolkit?</h2>
+    <p>The Offline Toolkit is a set of helpful programs that work without internet. You can keep them on a USB stick or computer and use them in emergencies.</p>
+
+    <h2>How to use it?</h2>
+    <ul>
+      <li>Plug in the USB stick or open the folder with the tools</li>
+      <li>Click on the tool you want (example: Kiwix to read Wikipedia)</li>
+      <li>No internet is needed to use the tools</li>
+    </ul>
+
+    <h2>Recommended tools</h2>
+    <ul>
+      <li><strong>Kiwix:</strong> Read Wikipedia offline</li>
+      <li><strong>Everything:</strong> Search your files instantly</li>
+      <li><strong>LibreOffice:</strong> Write texts, open spreadsheets</li>
+      <li><strong>7-Zip:</strong> Open ZIP files</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+      <li>Keep your tools up to date</li>
+      <li>Print this manual if possible</li>
+      <li>Use the same folder every time, so you don’t lose files</li>
+    </ul>
+
+    <div class="download">
+      <a href="#">📄 Download PDF (English)</a>
+    </div>
+  </div>
+
+  <div data-lang="nl" class="section">
+    <h2>Wat is de Offline Toolkit?</h2>
+    <p>De Offline Toolkit is een verzameling handige programma’s die werken zonder internet. Je kunt ze bewaren op een USB-stick of computer en gebruiken in noodgevallen.</p>
+
+    <h2>Hoe gebruik je het?</h2>
+    <ul>
+      <li>Steek de USB-stick in of open de map met de tools</li>
+      <li>Klik op het programma dat je wilt gebruiken (bijvoorbeeld Kiwix voor Wikipedia)</li>
+      <li>Internet is niet nodig om deze tools te gebruiken</li>
+    </ul>
+
+    <h2>Aanbevolen programma’s</h2>
+    <ul>
+      <li><strong>Kiwix:</strong> Wikipedia offline lezen</li>
+      <li><strong>Everything:</strong> Direct zoeken op je computer</li>
+      <li><strong>LibreOffice:</strong> Teksten schrijven, spreadsheets openen</li>
+      <li><strong>7-Zip:</strong> ZIP-bestanden openen</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+      <li>Houd de tools up-to-date</li>
+      <li>Print deze handleiding indien mogelijk</li>
+      <li>Gebruik telkens dezelfde map, zo raak je niets kwijt</li>
+    </ul>
+
+    <div class="download">
+      <a href="#">📄 Download PDF (Nederlands)</a>
+    </div>
+  </div>
+</body>
+</html>

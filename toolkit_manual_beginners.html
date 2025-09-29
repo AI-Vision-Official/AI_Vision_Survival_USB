@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolkit Manual – Beginners</title>
+  <style>
+    :root {
+      --deep-orange: #AD2507;
+      --warm-orange: #F08900;
+      --soft-white: #FEF9F6;
+      --text-color: #333;
+    }
+    body {
+      background-color: var(--soft-white);
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 1rem;
+    }
+    header {
+      background-color: var(--deep-orange);
+      color: white;
+      padding: 1rem;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+    .lang-switch button {
+      background-color: var(--warm-orange);
+      color: white;
+      border: none;
+      margin-left: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    h1, h2 {
+      color: var(--deep-orange);
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+    .download {
+      margin-top: 2rem;
+    }
+    .download a {
+      background-color: var(--deep-orange);
+      color: white;
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => switchLang('en');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Offline Toolkit – Beginner Guide</h1>
+  </header>
+
+  <div class="lang-switch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('nl')">Nederlands</button>
+  </div>
+
+  <div data-lang="en" class="section">
+    <h2><span class="icon">📁</span>What is this?</h2>
+    <p>This is a collection of helpful programs. You can use them <strong>without internet</strong>.</p>
+
+    <h2><span class="icon">🖱️</span>How do I use it?</h2>
+    <ul>
+      <li>Plug in the USB stick (or open the folder)</li>
+      <li>Double click a file to open it (for example <strong>Kiwix</strong>)</li>
+      <li>That’s it! The program opens.</li>
+    </ul>
+
+    <h2><span class="icon">🧰</span>What can you do?</h2>
+    <ul>
+      <li><strong>Watch a video:</strong> Use VLC (🎬)</li>
+      <li><strong>Write text:</strong> Use LibreOffice (✍️)</li>
+      <li><strong>Search your files:</strong> Use Everything (🔍)</li>
+      <li><strong>Learn offline:</strong> Use Kiwix (📚)</li>
+    </ul>
+
+    <h2><span class="icon">💡</span>Tips</h2>
+    <ul>
+      <li>Ask help if you don’t know something</li>
+      <li>Open only one program at a time</li>
+      <li>You cannot break anything — just explore!</li>
+    </ul>
+
+    <div class="download">
+      <a href="#">📄 Download PDF (English)</a>
+    </div>
+  </div>
+
+  <div data-lang="nl" class="section">
+    <h2><span class="icon">📁</span>Wat is dit?</h2>
+    <p>Dit is een verzameling handige programma’s. Je kunt ze <strong>zonder internet</strong> gebruiken.</p>
+
+    <h2><span class="icon">🖱️</span>Hoe gebruik ik dit?</h2>
+    <ul>
+      <li>Steek de USB-stick in (of open de map)</li>
+      <li>Dubbelklik op een bestand om het te openen (bijvoorbeeld <strong>Kiwix</strong>)</li>
+      <li>Dat is alles! Het programma opent vanzelf.</li>
+    </ul>
+
+    <h2><span class="icon">🧰</span>Wat kun je ermee?</h2>
+    <ul>
+      <li><strong>Video kijken:</strong> Gebruik VLC (🎬)</li>
+      <li><strong>Tekst typen:</strong> Gebruik LibreOffice (✍️)</li>
+      <li><strong>Bestanden zoeken:</strong> Gebruik Everything (🔍)</li>
+      <li><strong>Leren zonder internet:</strong> Gebruik Kiwix (📚)</li>
+    </ul>
+
+    <h2><span class="icon">💡</span>Tips</h2>
+    <ul>
+      <li>Vraag hulp als je iets niet weet</li>
+      <li>Open maar één programma tegelijk</li>
+      <li>Je kunt niets stuk maken — gewoon proberen!</li>
+    </ul>
+
+    <div class="download">
+      <a href="#">📄 Download PDF (Nederlands)</a>
+    </div>
+  </div>
+</body>
+</html>

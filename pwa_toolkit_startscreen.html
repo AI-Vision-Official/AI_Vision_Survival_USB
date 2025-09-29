@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heal the World – Offline Toolkit</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#AD2507">
+  <style>
+    :root {
+      --deep-orange: #AD2507;
+      --warm-orange: #F08900;
+      --soft-white: #FEF9F6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--soft-white);
+      color: #333;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: var(--deep-orange);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .intro {
+      margin: 2rem 0;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .choice-card {
+      background-color: white;
+      border: 2px solid var(--warm-orange);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .choice-card:hover {
+      transform: scale(1.03);
+    }
+
+    .choice-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+  <script>
+    function openModule(module) {
+      alert("This would open: " + module + " (in real app: redirect to HTML page)");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Heal the World – Offline Toolkit</h1>
+  </header>
+
+  <div class="intro">
+    <p>Select the topic you need help with. This toolkit works without internet.</p>
+  </div>
+
+  <div class="choice-grid">
+    <div class="choice-card" onclick="openModule('general')">
+      <h3>🌍 General Emergencies</h3>
+      <p>Basic tools and instructions</p>
+    </div>
+    <div class="choice-card" onclick="openModule('natural')">
+      <h3>🌪️ Natural Disasters</h3>
+      <p>Earthquake, flood, heat, etc.</p>
+    </div>
+    <div class="choice-card" onclick="openModule('medical')">
+      <h3>💊 Medical Help</h3>
+      <p>First aid, medication, symptoms</p>
+    </div>
+    <div class="choice-card" onclick="openModule('psych')">
+      <h3>🧠 Mental Health</h3>
+      <p>Calm down, autism support</p>
+    </div>
+    <div class="choice-card" onclick="openModule('offline-life')">
+      <h3>🔌 Living Offline</h3>
+      <p>How to manage without internet</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>All content is usable offline. You can copy this toolkit to your own USB-stick.</p>
+  </div>
+</body>
+</html>
